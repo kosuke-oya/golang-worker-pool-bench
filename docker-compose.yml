@@ -1,0 +1,14 @@
+---
+services:
+  bench:
+    image: bench:latest
+    container_name: "bench"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      # 開発用のためターゲットをdevに指定する
+      target: dev
+    volumes:
+      - ./:/app
+    tty: true
+    restart: always
