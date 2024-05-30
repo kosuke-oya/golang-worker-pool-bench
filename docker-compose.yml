@@ -6,7 +6,6 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-      # 開発用のためターゲットをdevに指定する
       target: dev
     volumes:
       - ./:/app
